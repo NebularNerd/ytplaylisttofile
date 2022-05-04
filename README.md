@@ -1,7 +1,7 @@
 # ytplaylisttofile
-This Python 3 script allows you to bulk grab a YouTube playlist page, strip out the urls and save them to a text file. It's a little non straight forward but it does work and give you a working list to use for whatever reason you need a scraped channel list of video [yt-dlp](https://github.com/yt-dlp/yt-dlp) batch downloads for example.
+This Python 3 script allows you to bulk grab a YouTube playlist page, strip out the urls and save them to a text file. It's a little non straight forward but it does work and gives you a working list to use for whatever reason you need a scraped channel list of video urls, [yt-dlp](https://github.com/yt-dlp/yt-dlp) batch downloads for example.
 
-I wrote this as the yt-dlp method for getting a playlist to bulk download was not working for me (kept download a standard consent page), I know I could play around and tie my session ID to everything but I want to keep everything seperate.
+I wrote this as the yt-dlp method for getting a playlist to bulk download was not working for me (kept downloading/accessing a standard consent page), I know I could play around and tie my session ID to everything but I want to keep everything seperate to my accounts.
 
 The script accepts the following arguments and abbreviations:
 ```usage: ytplgrab.py [-h] --infile INFILE --outfile OUTFILE
@@ -28,14 +28,14 @@ Using this is slightly awkward, but equally once you know very easy, this is bas
 4) Paste this into a blank text file and save it.
 
 ### Step Two
-Open a console/command prompt and run something similar to the below, adjust dirs and drives as required:
-```python C:\python\ytplgrab.py -i R:\ytin.txt -o R:\ytdone.txt```
-It will chew through the input file, find any vids, remove duplicates, create the output file with one video url to a line. This can then be used for what ever purpose you needed that list of url's for. For example, this might be handy for some:
+Open a console/command prompt and run something similar to the below, adjust dirs and drives as required:  
+```python C:\python\ytplgrab.py -i R:\ytin.txt -o R:\ytdone.txt```  
+It will chew through the input file, find any vids, remove duplicates, create the output file with one video url to a line. This can then be used for what ever purpose you needed that list of url's for. For example, this might be handy for some:  
 ```yt-dlp.exe --ffmpeg-location "C:\FFMpeg\bin" --user-agent "Chrome/89" -o "R:\Video\%%(title)s.%%(ext)s" -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" --verbose --batch-file R:\ytdone.txt```
 
 ## Future plans:
 - Tidy code and add file exists check/override (either as y/n or commandline arg or both)
-- PyGUI based GUI to make it more point and click, could allow for multiple systems to be output into one file
+- PyGUI based GUI to make it more point and click, this would skip the need for the input file at least
 - Suggestions?
 
 ## License:
