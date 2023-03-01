@@ -1,3 +1,7 @@
+# Discontinued:
+Check out my much better solution using Tampermonkey here: [YT-URL-Extractor](../../../YT-URL-Extractor)
+
+
 # ytplaylisttofile
 This Python 3 script allows you to bulk grab a YouTube playlist page, strip out the urls and save them to a text file. It's a little non straight forward but it does work and gives you a working list to use for whatever reason you need a scraped channel list of video urls, [yt-dlp](https://github.com/yt-dlp/yt-dlp) batch downloads for example.
 
