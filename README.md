@@ -1,4 +1,4 @@
-# Discontinued:
+# ❌ Discontinued ❌
 Check out my much better solution using Tampermonkey here: [YT-URL-Extractor](../../../YT-URL-Extractor)
 
 
